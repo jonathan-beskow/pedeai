@@ -1,0 +1,56 @@
+<html>
+<head th:replace="~{base :: head}"></head>
+<body>
+
+	<header>
+		<div class="container" id="nav-container">
+			<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+				<a href="#"><i class="fas fa-shopping-cart" id="icone-logo"></i></a>
+				<div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+					<div class="navbar-nav">
+						<a th:classappend="${status} == null ? 'active'"class="nav-item nav-link" id="home-menu" href="/home">Home</span></a>
+						<a th:classappend="${status} == 'aguardando' ? 'active'" class="nav-item nav-link" href="/home/aguardando">Aguardando</a> 
+						<a th:classappend="${status} == 'aprovado' ? 'active'" class="nav-item nav-link"  href="/home/aprovado">Aprovados</a>	
+						<a th:classappend="${status} == 'entregue' ? 'active'" class="nav-item nav-link"  href="/home/entregue">Entregues</a>
+						<a class="nav-item nav-link" id="services-menu" href="/pedido/formulario">Novo Pedido</a>
+							
+					</div>
+				</div>
+
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div id="team-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h3 class="main-title">Produtos e Pedidos de nossos usuários</h3>
+							</div>
+								<div class="col-md-3" th:each="pedido : ${pedidos}">
+								
+								<th:block th:switch="${pedido.status.name()}">
+								<div th:case="'AGUARDANDO'" class="card-header alert-warning" th:text="${pedido.nomeProduto}"></div>
+								<div th:case="'APROVADO'" class="card-header alert-success" th:text="${pedido.nomeProduto}"></div>
+								<div th:case="'ENTREGUE'" class="card-header alert-dark" th:text="${pedido.nomeProduto}"></div>
+								</th:block>
+									<img th:src="${pedido.urlImagem}" class="card-img-top img-thumbnail" >
+									<div class="card-body">
+										<h5 class="card-title" id="valor" th:text="${'R$ ' +#numbers.formatDecimal(pedido.valorNegociado,3,'POINT', 2, 'COMMA')}"></h5>
+										<p class="card-text" th:text="${pedido.dataDaEntrega}"></p>
+										<span class="card-text"th:text="${#temporals.format(pedido.dataDaEntrega, 'dd/MM/yyyy')}">AAA</span>
+										<p class="card-text" th:text="${pedido.descricao}"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</main>
+</body>
+</html>

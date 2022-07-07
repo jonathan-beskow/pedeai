@@ -1,0 +1,163 @@
+
+
+
+
+
+
+
+<head th:fragment="head">
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap-->
+<!--      <link rel="stylesheet" href="css/styles.css"> -->
+<!--      <link href="css/styles.css" rel="stylesheet" type="text/css"> -->
+<style>
+/* Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFF;
+  }
+  
+  .row {
+    margin: 0;
+  }
+  
+  .container {
+    padding: 70px 0;
+  }
+  
+  p, li {
+    color: #444;
+    font-size: 14px;
+  }
+
+
+  
+  /* Barra de navegação */
+  header, .navbar {
+    background-color: #333237;
+  }
+  
+  #nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  #logo {
+    width: 75px;
+  }
+  
+  .navbar-brand {
+    padding: 0;
+    color: #FFF;
+  }
+  
+  .navbar-brand:hover {
+    color: #FFF;
+  }
+  
+  #navbar-links a {
+    color: #FFF;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+  }
+  
+  .nav-item.active {
+    border-bottom: 3px solid #FFF;
+  }
+
+ #icone-logo {
+    transition: .5s;
+    font-size: 36px;
+
+    margin-left: 25px;
+   /** color: #45b5c4;*/
+   color: #FFF;
+  }
+
+  #icone-logo:hover {
+      font-size: 42px;
+      margin-left: 25px;
+
+  }
+  
+
+  #team-area .col-md-3 {
+    width: 50%;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  
+  #valor {
+      font-style: italic;
+      font-size: 22px;
+      color: darkred;
+  }
+
+  /* botão do cartão */
+  .main-btn {
+  	content-align: center;
+    background-color: #fb8351;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 120px;
+    height: 360px;
+    padding: 10px 20px;
+    border-radius: 36px;
+    border: 3px solid ;
+    transition: .5s;
+  }
+
+  .main-btn:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #ffad64;
+  }
+
+
+  /* Produtos */
+
+  .main-title {
+    color: #444;
+    margin-top: 25px;
+    margin: 0 0 50px 0;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .main-title::after {
+    content: "";
+    border-top: 2px solid #333;
+    width: 45%;
+    position: absolute;
+    top: 50px;
+    left: 25%;
+  }
+
+</style>
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+    <!-- Progress Bar -->
+    <script src="js/progressbar.min.js"></script>
+    <!-- Parallax -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+</head>
